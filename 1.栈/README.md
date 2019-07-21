@@ -8,7 +8,8 @@
    * 自助餐的托盘, 最新放上去的, 最先被客人拿走使用
    * 手枪弹夹填入子弹和发射子弹，只允许在一端填入子弹。最先填入的子弹，最后才能发射。这也是栈结构
 * **栈**都是比较常见的 __受限的线性结构__
-![示意图](D:\学习\数据结构和算法\imgs\栈示意图.PNG)
+
+![images](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E6%A0%88%E7%A4%BA%E6%84%8F%E5%9B%BE.PNG?1563683971190)
 -----
 ### 栈的常见操作
 * `push()`: 添加一个新元素到栈顶位置.
@@ -17,4 +18,4 @@
 * `isEmpty()`: 检查栈是否为空，如果栈里没有任何元素就返回`true`，否则返回`false`.
 * `size()`: 返回栈里的元素个数.
 * `clear()`: 移除栈里的所有元素.
-![示意图](D:\学习\数据结构和算法\imgs\栈.png)
+![images](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E6%A0%88.png?1563684269027)
