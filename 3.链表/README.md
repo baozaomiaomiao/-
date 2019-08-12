@@ -22,19 +22,23 @@
    
    ![示意图](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E9%93%BE%E8%A1%A8append.png)
    * 场景二 链表中已经有元素了, 需要向最后的节点的next中添加节点.链表头指向新的节点，新的节点指向null
-   ![示意图](D:\学习\JavaScript 数据结构和算法\imgs\链表append2.png)
+   ![示意图](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E9%93%BE%E8%A1%A8append2.png)
+   
 * `insert(position, element)`: 向链表的特定位置插入一个新的项.
    * 场景一 添加到第一个位置, 表示新添加的节点是头, 就需要将原来的头节点, 作为新节点的next
-   ![示意图](D:\学习\JavaScript 数据结构和算法\imgs\链表insert.png)
+   
+   ![示意图](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E9%93%BE%E8%A1%A8insert.png)
    * 场景二 如果是添加到其他位置, 我们通过while循环, 一点点向下找. 并且在这个过程中保存上一个节点和下一个节点.找到正确的位置后, 将新节点的next指向下一个节点, 将上一个节点的next指向新的节点.
-   ![示意图](D:\学习\JavaScript 数据结构和算法\imgs\链表insert2.png)
+   
+   ![示意图](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E9%93%BE%E8%A1%A8insert2.png)
 * `remove(element)`: 从链表中移除一项.
 * `indexOf(element)`: 返回元素在链表中的索引。如果链表中没有该元素则返回-1.
 * `removeAt(position)`: 从链表的特定位置移除一项.
    * 移除第一项时, 直接让head指向第二项信息就可以啦
-   ![示意图](D:\学习\JavaScript 数据结构和算法\imgs\链表removeAt.png)
+   ![示意图](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E9%93%BE%E8%A1%A8removeAt.png)
    * 移除其他项时。首先, 我们需要通过while循环, 找到正确的位置，找到正确位置后, 就可以直接将上一项的next指向current项的next, 这样中间的项就没有引用指向它, 也就不再存在于链表后, 会面会被回收掉.
-   ![示意图](D:\学习\JavaScript 数据结构和算法\imgs\链表removeAt2.png)
+   
+   ![示意图](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E9%93%BE%E8%A1%A8removeAt2.png?1565591950471)
 * `isEmpty()`: 检查链表是否为空，如果链表里没有任何元素就返回`true`，否则返回`false`.
 * `size()`: 返回链表里的元素个数.
 * `clear()`: 移除链表里的所有元素.
