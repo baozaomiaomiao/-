@@ -19,4 +19,4 @@
 * `isEmpty()`: 如果队列中不包含任何元素返回`true`，否则返回`false`.
 * `size()`: 返回队列包含的元素个数.
 * `print()`: 打印队列
-![示意图](https://github.com/baozaomiaomiao/JavaScript-data-structure/imgs/%E6%A0%88.png)
+![示意图](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E9%98%9F%E5%88%97.PNG)
