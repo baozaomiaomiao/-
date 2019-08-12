@@ -18,4 +18,5 @@
 * `size()`: 返回栈里的元素个数.
 * `clear()`: 移除栈里的所有元素.
 * `print()`: 打印栈里的元素.
+
 ![示意图](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E6%A0%88%E7%A4%BA%E6%84%8F%E5%9B%BE.PNG?1565591631919)
