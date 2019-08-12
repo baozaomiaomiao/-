@@ -44,8 +44,6 @@ class LinkedList {
       this.length++;
    }
 
-
-
    // 获取链表头部
    getHead() {
       return this.head;
@@ -113,34 +111,27 @@ class LinkedList {
       }
    }
 
-   // 删除任意位置元素
+   // 移除指定位置元素
    removeAt(position) {
-      // 越界处理
+      // 检查越界值
       if (position < 0 || position >= this.length) {
          return null;
+      }
+
+      let current = this.head;
+      let previous = null;
+      let index = 0;
+      if (position === 0) {
+         this.head = current.next;
       } else {
-         let current = this.head, //保存对第一个元素的引用 && 担当对所循环链表的当前元素的引用
-            index = 0,
-            previous = null;
-         let deleteNode = null
-         // 删除的是头节点
-         if (position === 0) {
-            deleteNode = this.head;
-            // head指向下一个节点
-            this.head = this.head.next;
-         } else {
-            while (index < position) {
-               previous = current;
-               //
-               current = current.next;
-               index++;
-            }
-            //使前一个元素的next直接指向被删除元素的下一项。跳过current，从而移除它
-            previous.next = current.next;
+         while (index < position) {
+            previous = current;
+            current = current.next;
+            index ++;
          }
+         previous.next = current.next;
       }
       this.length--;
-      // 返回被删除的元素
       return current.element;
    }
 
@@ -151,7 +142,7 @@ class LinkedList {
    // 转化为字符串
    toString() {
       let current = this.head,
-         string = '';
+         string = "";
       while (current) {
          string += `${current.element}`;
          current = current.next;
@@ -172,12 +163,10 @@ class LinkedList {
       }
       return -1;
    }
+
+   // 删除元素
+   remove(element) {
+      return this.removeAt(this.indexOf(element));
+   }
 }
 
-let a = new LinkedList()
-a.append(1)
-a.append(2)
-a.append(3)
-a.insert(1, '11')
-console.log(a.getNode(1))
-console.log(a.getHead())
