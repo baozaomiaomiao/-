@@ -7,7 +7,11 @@ class Stack {
    }
    // 添加元素。将元素压入到栈
    push(element) {
-      // 借用JS数组的push
+      // 判断是否传入参数
+      if(element === undefined) {
+         throw new Error('Undefined is not a valid value');
+      }
+      // 借用JS数组的push, JS是门高级语言封装好了一系列方法
       this[_stack].push(element);
       
       // 自己实现
@@ -16,6 +20,10 @@ class Stack {
 
    // 移除栈顶元素，并返回
    pop() {
+      // 做一下代码健壮性处理。栈为空时 不可以取不出元素。
+      if(this.isEmpty()) {
+         throw new SyntaxError('Stack is empty, please add elements using push()');
+      }
       return this[_stack].pop();
 
       // if(this[_stack].length === 0 ) return undefined;
@@ -26,46 +34,32 @@ class Stack {
 
    // 查看栈顶元素
    peek() {
-      return this[_stack][this[_stack].length - 1]
+      if(this.isEmpty()) {
+         throw new SyntaxError('stack is empty');
+      }
+      return this[_stack][this[_stack].length - 1];
    }
 
    // 查看栈是否为空
    isEmpty() {
-      return this[_stack].length === 0
+      return this[_stack].length === 0;
    }
 
    // 清空栈
    clear() {
-      this[_stack] = []
+      this[_stack] = [];
    }
 
    // 获取栈的大小
    size() {
-      return this[_stack].length
+      return this[_stack].length;
+   }
+   
+   // 打印栈数据
+   print() {
+      if(this.isEmpty()) {
+         throw new SyntaxError('The stack is empty');
+      }
+      console.log(this[_stack].toString());
    }
 }
-
-
-// ------------------------------------------------------------
-
-// 练习 使用栈结构实现，十进制转化为二进制   
-
-
-let divBy2 = (number) => {
-   let numStack = new Stack(),  
-       remainder,   //保存余数
-       stringStack = '' // 获取二进制结果
-
-   while (number > 0) {
-      remainder = number % 2 // 余数 0 | 1
-      numStack.push(remainder)
-      number = Math.floor(number / 2)  // 向下取整，方便计算 25/2 = 12.5 => 12 / 2 .....
-   }    
-
-   while(!numStack.isEmpty()) {
-      stringStack += numStack.pop()        
-   }
-
-   return stringStack
-}
-

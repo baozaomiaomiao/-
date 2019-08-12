@@ -1,5 +1,5 @@
 # 栈
-* __栈__ 是一种 __先进后出(LIFO)__ 的数据结构
+* __栈__ 是一种特殊的线性表，有着__先进后出(LIFO)__ 的特性
 * LIFO(last in first out)表示就是最后进入的元素, 第一个弹出栈空间. 类似于自动餐托盘, 最后放上的托盘, 往往先把拿出去使用
 * 其限制是仅允许在一端进行插入和删除运算。这一端被称为**栈顶**，相对地，把另一端称为**栈底**。
 * 向一个栈插入新元素又称作**进栈、入栈**或**压栈**，它是把新元素放到栈顶元素的上面，使之成为新的栈顶元素；
@@ -8,8 +8,7 @@
    * 自助餐的托盘, 最新放上去的, 最先被客人拿走使用
    * 手枪弹夹填入子弹和发射子弹，只允许在一端填入子弹。最先填入的子弹，最后才能发射。这也是栈结构
 * **栈**都是比较常见的 __受限的线性结构__
-
-![images](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E6%A0%88%E7%A4%BA%E6%84%8F%E5%9B%BE.PNG?1563683971190)
+![示意图](https://github.com/baozaomiaomiao/JavaScript-/blob/master/imgs/%E6%A0%88.png)
 -----
 ### 栈的常见操作
 * `push()`: 添加一个新元素到栈顶位置.
@@ -18,4 +17,5 @@
 * `isEmpty()`: 检查栈是否为空，如果栈里没有任何元素就返回`true`，否则返回`false`.
 * `size()`: 返回栈里的元素个数.
 * `clear()`: 移除栈里的所有元素.
-![images](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E6%A0%88.png?1563684269027)
+* `print()`: 打印栈里的元素.
+![示意图](https://github.com/baozaomiaomiao/JavaScript-data-structure/imgs/%E6%A0%88.png)
