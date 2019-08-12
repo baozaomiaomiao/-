@@ -6,18 +6,21 @@
 * 链表: 是**非常重要**的基础数据结构。 
    * 要存储多个元素, 另外一个选择就是使用链表，链表不同于数组, 链表中的元素在内存中不必是连续的空间.
    * 链表的每个元素由一个存储元素本身的节点和一个指向下一个元素的引用(指针或者链接)组成.
-![示意图](D:\学习\JavaScript 数据结构和算法\imgs\链表示意图.png)
+   
+![示意图](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E9%93%BE%E8%A1%A8%E7%A4%BA%E6%84%8F%E5%9B%BE.png)
 * 相对于数组, 链表有一些缺点:
    * 链表访问任何一个位置的元素时, 都需要从头开始访问(无法跳过第一个元素访问任何一个元素).
    * 无法通过下标直接访问某个元素， 需要从头一个个访问
 * 链表结构类似于火车: 一列火车是由火车头和一系列车厢组成。每节车厢都相互连接。每节车厢都是链表的元素，车厢间的连接就是指针(引用)。
-![示意图](D:\学习\JavaScript 数据结构和算法\imgs\链表-火车.png)
-![示意图](D:\学习\JavaScript 数据结构和算法\imgs\链表-火车-结构版.png)
+
+![示意图](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E9%93%BE%E8%A1%A8-%E7%81%AB%E8%BD%A6.png)
+![示意图](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E9%93%BE%E8%A1%A8-%E7%81%AB%E8%BD%A6-%E7%BB%93%E6%9E%84%E7%89%88.png)
 -----
 ### 链表的常见操作
 * `append(element)`: 向链表尾部添加一个新的项.
    * 场景一 链表为空。直接将插入的元素设为链表头。如图直接添加一个值为15的节点
-   ![示意图](D:\学习\JavaScript 数据结构和算法\imgs\链表append.png)
+   
+   ![示意图](https://github.com/baozaomiaomiao/JavaScript-data-structure/blob/master/imgs/%E9%93%BE%E8%A1%A8append.png)
    * 场景二 链表中已经有元素了, 需要向最后的节点的next中添加节点.链表头指向新的节点，新的节点指向null
    ![示意图](D:\学习\JavaScript 数据结构和算法\imgs\链表append2.png)
 * `insert(position, element)`: 向链表的特定位置插入一个新的项.
