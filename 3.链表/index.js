@@ -65,12 +65,8 @@ class LinkedList {
 
    // 指定位置添加元素
    insert(position, element) {
-      // position === length,在尾节点后面直接添加即可
-      if (position === this.length) {
-         return this.append(element);
-      }
       // 越界处理.直接返回false
-      if (position < 0 || position >= this.length) {
+      if (position < 0 || position > this.length) {
          return false;
       } else {
          //实现方法一
