@@ -26,4 +26,3 @@ const pairedParenthesis = (str) => {
 
 console.log(pairedParenthesis('()sd(fg(fw))(d)'));
 console.log(pairedParenthesis('((ll)(w)g()'));
-pairedParenthesis('((ll)(w)g()))');

@@ -26,11 +26,10 @@ function cale_exp(exp) {
       }
    }
    // 错误处理
-   if(stack.isEmpty()) return false;
+   if (stack.isEmpty()) return false;
 
    return stack.pop()
 }
 
-console.log(cale_exp(['1','2','3','*','-']))
-console.log(cale_exp(['6','2','3','*','*']))
-console.log(cale_exp([1]))
+console.log(cale_exp(['1', '2', '3', '*', '-']))
+console.log(cale_exp(['6', '2', '3', '*', '*']))
