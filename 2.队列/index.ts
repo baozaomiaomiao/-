@@ -1,24 +1,33 @@
-class TSQueue {
-   private queue = [];
+interface IQueue<T> {
+   enqueue(ele): void;
+   dequeue(): T;
+   front(): T;
+   isEmpty(): boolean;
+   size(): number;
+   print(): void;
+}
+
+class TSQueue<T> implements IQueue<T> {
+   private queue: T[];
    // 入列
    enqueue(ele): void {
-      if(ele === undefined) {
+      if (ele === undefined) {
          throw new Error('Undefined is not a valid value');
       }
       this.queue.push(ele);
    }
-   
+
    // 出列
-   dequeue(): any {
-      if(this.isEmpty()) {
-         throw new SyntaxError('Queue is empty, please add elements using enqueue()');
+   dequeue(): T {
+      if (this.isEmpty()) {
+         throw new SyntaxError('Queue is empty');
       }
       return this.queue.shift();
    }
 
    // 查看队列第一个元素
-   front(): any {
-      if(this.isEmpty()) {
+   front(): T {
+      if (this.isEmpty()) {
          throw new SyntaxError('Queue is empty');
       }
       return this.queue[0];
@@ -34,9 +43,9 @@ class TSQueue {
       return this.queue.length;
    }
 
-      // 打印队列
+   // 打印队列
    print(): void {
-      if(this.isEmpty()) {
+      if (this.isEmpty()) {
          throw new SyntaxError('Queue is empty');
       }
       console.log(this.queue.toString());

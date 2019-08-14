@@ -100,7 +100,7 @@ function joseph_Ring(arr_list) {
    // 队列里的元素，不是唯一的就一直循环，删除元素
    while (queue.size() != 1) {
       let a = queue.dequeue()
-      index ++;
+      index++;
       // 每隔两个删一个。不满足条件的元素继续放入尾部。
       if (index % 3 !== 0) {
          queue.enqueue(a)
