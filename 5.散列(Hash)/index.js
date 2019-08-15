@@ -9,7 +9,7 @@ class HashTable {
       let hash = 0;
       for(let codePoint of key) {
          // 通过ascii码表转换字母为数字
-         hash += codePoint.charCodeAt();
+         hash = codePoint.charCodeAt();
       }
       // 得到更小的值,返回的值称为散列值
       return hash % 37;
