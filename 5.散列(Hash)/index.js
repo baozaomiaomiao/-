@@ -21,7 +21,7 @@ class HashTable {
    static djb2HashCode(key) {
       let hash = 5381;
       for(let codePoint of key) {
-         hash = hash * 33 + codePoint.charCodeAt();
+         hash += hash * 33 + codePoint.charCodeAt();
       }
       return hash % 1013;
    }
